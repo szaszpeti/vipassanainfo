@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+ <div class="container" align="center">
+<h1>WELCOME <span style="color:blue;"> {{username | upper}}</span>!!!</h1>
+<br><br>
+    <h2>HOEP YOU WILL FIND USEFULL INFRMATION</h2>
+
+     <a type="button" href="{% url 'blog:list'%}" class="btn btn-primary">ENTER THE BLOG</a>
+
+
+</div>
+
+{% endblock content %}
+
+

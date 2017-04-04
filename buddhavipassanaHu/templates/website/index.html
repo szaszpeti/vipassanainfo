@@ -1,0 +1,503 @@
+{% extends "website/baseWebsite.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+
+<!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">VIPASSANA</a>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#rolunk"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#ajahntong">AJAHN TONG</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#oktatok">OKTATÓK</a>
+                    </li>
+
+
+                    <li>
+                        <a class="page-scroll" href="#tanfolyamok">TANFOLYAMOK</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#informacio">INFORMÁCIÓ</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#kapcsolat" ><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></a>
+
+                    </li>
+                    <li>
+                        <a href="{% url 'website:english' %}" style="color:red;">ENGLISH</a>
+                   </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+
+                <div class="intro-lead-in"  style="color:yellow;">VIPASSANA MEDITÁCIÓ</div>
+                <p>Ajahn Tong Sirimangalo hagyományvonalán</p><br><br><br><br><br><br><br><br>
+                <p></p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="rolunk" class="bg-light-gray">
+         <div class="container" align="center">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-xs-center">
+                <img src="img/buddha.png">
+                    <br>
+                    <br>
+
+                    <h1>BUDDHAVIPASSANA.HU</h1><br><br>
+                    <p style="font-size: 20px;">A weboldal azzal a céllal jött létre, hogy meditációs tanfolyamok szervezésével, Magyarországon és Közép/Kelet-Európában is megismertesse Tiszteletreméltó <a href="#ajahntong">Ajahn Tong Sirimangalo</a> thaiföldi mester hagyományvonalán gyakorolt Vipassana meditációt.<br><br>A technika nemzetközi szinten való terjesztése <a href="#oktatok">Thanat és Kathryn Chindaporn</a> nevéhez fűződik, akik kezdeményezték a magyarországi tanfolyamszervezést is.&nbsp;<br><br></p>
+                     <hr>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="ajahntong">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+
+
+<br>
+<br>
+                    <h2 class="section-heading">Ajahn Tong Sirimangalo</h2>
+
+
+                    <h3 class="section-subheading text-muted">A thaiföldi Wat Phradat Sri Chomtong Voravihara Meditációs Központ és kolostor apátja. 1923-ban született, 12 éves kora óta él buddhista szerzetesként. Az utóbbi 60 évet a Vipassna Meditáció tanításának szentelte. A 93 éves Vipassana Mester jelenleg is tanít Thaiföldön.</h3>
+                    <img src="img/ajahn.jpg" style="height: 25%; width: 25%;">
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <!-- Portfolio Grid Section -->
+    <section id="oktatok" class="bg-light-gray">
+         <div class="container" align="center">
+
+         <h2><strong>OKTATÓK</strong></h2>
+   <br><br>
+
+   <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail thumbnail-teachers">
+                    <div><img src="img/thanat2.jpg" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4><strong>THANAT CHINDAPORN</strong></h4><p>A thaiföldi Chomtong Meditációs Központ Nemzetközi Részlegének alapítója és vezetője. Ajahn Tong tanítványa és az 1980-as évek közepétől oktat Vipassana meditációt a világ minden táján. Az elmúlt 30 évben tanfolyamokat vezetett Mexicóban,Egyesült Államokban, Hawai szigetén, Columbiában, Indiában, Izraelben, Németroszágban, Szlovéniában, Svédországban, Franciaországban, Spanyolországban, Oroszországban, Ukrajnában, Bulgáriában.&nbsp;2004-ben a thaiföldi kormány munkája elismeréseként a kitüntetésben részesített.&nbsp;</p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="thumbnail thumbnail-teachers">
+                    <div><img src="img/kate2.jpg" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4><strong>KATHRYN CHINDAPORN</strong></h4><p>Férjével közösen több mint 25 éve oktat Vipassana meditációt. 1989 óta thai-angol fordítóként is segíti thaiföldi mesterek tanításainak külföldön való megismertetését. 1999-2007 között a Chiang Mai Buddhista Egyetem oktatója volt. &nbsp;2000-ben Thaiföld királynője a  Sema Dhammacakka ("A Dhamma Aranypillére") kitűntetésben részesítette a Buddha tanításainak nemzetközi szinten való terjesztéséért.&nbsp;
+                    </p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+
+    <section id="tanfolyamok">
+        <div class="container" align="center">
+
+    <h2><strong>AKTUÁLIS TANFOLYAMOK, ESEMÉNYEK</strong></h2><br><br>
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-courses">
+                    <div><img src="img/bp.jpg" class="card-img-top" style="width:100%; height: 100%;"></div>
+                    <div class="card-block">
+                        <h4><strong>MAGYARORSZÁG</strong></h4><p>(Budapest)</p><br><br><h4>ELŐADÁS</h4><br><strong><h5>2017. július 29.</strong><br></h5><br>
+                        <br><p>Előadók:<br> Thanat &amp; Kathryn Chindaporn<br><br></p>
+                        <h4><a href="#információ" class="portfolio-link" data-toggle="modal">Információ</a></h4>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-courses">
+                    <div><img src="img/zolyom.jpg" class="card-img-top" style="width:100%; height: 100%;"></div>
+                    <div class="card-block">
+                        <h4><strong>SZLOVÁKIA</strong></h4><p>(Zólyom)</p><br><br><h4>ALAP TANFOLYAM</h4><br><h5><strong>2017. július 31 - augusztus 13.</strong></h5><br><br><p>Oktatók:<br> Thanat &amp; Kathryn Chindaporn<br><br></p>
+                         <h4><a href="#szlovakia" class="portfolio-link" data-toggle="modal">Információ</a></h4>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-courses">
+                    <div><img src="img/praga.jpg" class="card-img-top" style="width:100%; height: 100%;"></div>
+                    <div class="card-block">
+                        <h4><strong>CSEHORSZÁG</strong></h4><p>(Prága)</p><br><br><h4>TANFOLYAMOK FOLYAMATOSAN</h4><br><br><br><br><p>Oktatók: <br>Jonathan Preboy &amp; Anna Scharfenberg</p><br>
+                        <h4><a href="#tisarana" class="portfolio-link" data-toggle="modal">Információ</a></h4>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Team Section -->
+    <section id="informacio" class="bg-light-gray">
+        <div class="container" align="center">
+    <h2><strong>A NÁLUNK OKTATOTT MEDITÁCIÓS TECHNIKÁRÓL</strong></h2><br><br>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div class="thumbnail thumbnail-info">
+                        <h4><strong>Meditációs technika</strong><br><strong><br></strong></h4>
+                        <p>Az oktatott technika a burmai Mahasi Sayadow által kidolgozott Satipatthana Vipassana meditációs technika intenzívebb formája, tudatos járó és ülő meditációkkal,  Tiszteletreméltó Ajahn Tong Sirimangalo tanítása alapján.<br><br>*  *  *<br>A tanfolyamon résztvevők egy struktúrált egyszerű gyakorlatsoron keresztül sajátíthatják el a tudatos jelenlét alkalmazását a test-tudatban megjelenő jelenségek megfigyelésével.<br><br>*  *  *<br>A résztvevők a tanfolyam kezdetekor részletes ismertetőt kapnak a technikához. A gyakorlás során mindenkinek lehetősége van napi beszélgetésre egyénileg az oktatóval, ahol kérdéseket tehetnek fel és megoszthatják tapasztalataikat.&nbsp;<br><br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div class="thumbnail thumbnail-info">
+                        <h4><strong>Tanfolyamok rendszere</strong><strong><br></strong></h4>
+                        <p></p><p>Bevezető tanfolyam: 1-3 nap<br>Alaptanfolyam: 13-15 nap<br><br>Alaptanfolyam elvégzése után<br>Elvonulások: 11 nap<br><br>*  *  *<br><strong>Tanfolyamok napirendje</strong><br>04:00 Ébresztő<br>06:30 Reggeli<br>11:30 Ebéd<br>22:00 Takarodó<br><br>A fent maradó időben gyakorlás az oktatótól kapott utasítások alapján.<br><br>*  *  *<br><strong>Tanfolyamok helyszíne</strong><br>Változó.<br>Információ az aktuális eseményekről<br><a href="#tanfolyamok">itt található</a><a href="#tanfolyamok"></a><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div class="thumbnail thumbnail-info">
+                        <h4><strong>Szabályok</strong><br><strong><br></strong></h4>
+                        <p>A tanfolyam ideje alatt 8 szabályt kell betartani a résztvevőknek:</span><br><br><strong>TARTÓZKODÁS:</strong><br><strong>1.</strong> bármilyen élőlény elpusztításától<br><strong>2.</strong> lopástól<br><strong>3.</strong>  minden szexuális aktivitástól<br><strong>4.</strong> hazugságtól, másokat bántó beszédtől<br><strong>5.</strong> alkohol és drog és egyéb tudatmódosító szerek fogyasztásától<br><strong>6</strong>. délutáni evéstől<br><strong>7.</strong> szórakozástól, ékszerek viselésétől<br><strong>8.</strong> magas, luxus ágy használatától<br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container" align="center">
+     <h2><strong>GYAKRAN ISMÉTELT KÉRDÉSEK</strong></h2>
+   <br><br>    <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div class="thumbnail thumbnail-gyik">
+
+                        <h4><strong>Mi az a Vipassana?</strong><br><br></h4>
+                        <p>A Vipassana egy ősi meditációs technika, amelyet 2500 évvel ezelőtt Gautama Buddha újra felfedezett.&nbsp;<br>Vipassana jelentése: meglátni a dolgok valódi lényét. <br>A gyakorlatok során az egyén ömegfigyelés és tudatos jelenlét gyarolása során képes mélyebb megértéshez jutni, és ez által tisztábban látni önmagát és a körülötte lévő világot.<br><br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                   <div class="thumbnail thumbnail-gyik">
+                        <h4><strong>Kinek ajánlott a tanfolyam?</strong><br><strong><br></strong></h4>
+                        <p>A tanfolyam elsősorban azoknak ajánlott, akik hajlandóak komolyan gyakorloni és követni az oktatók utasításait és képesek betartani a tanfolyam szabályait.<br><br>* * *<br>Korábbi meditációs tapasztalat nem szükséges<br><br><br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                   <div class="thumbnail thumbnail-gyik">
+                        <h4><strong>Mit nyerek majd ha részt veszek a tanfolyamon?</strong></h4>
+                        <p><br>Buddhát egyszer&nbsp;<br>megkérdezték: „Mit nyertél a meditációval?”<br>„Semmit! <br>Válaszolta. De hadd mondjam el, hogy mit veszítettem: haragot, szorongást, depressziót, bizonytalanságot, és az öregségtől és haláltól való félelmet."<br><br><br><br><br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div class="thumbnail thumbnail-gyik">
+                        <h4><strong>Tanfolyami költségek?</strong></h4>
+                        <p><br>A hagyományokat követve az oktatásnak nincsen díja. Ahogyan a korábban végzett tanítványainknak úgy a tanfolyam végén a jelenlegi részvevőknek is lehetőségük van adománnyal hozzájárulni ahhoz, hogy a Vipassana meditáció minél több emberhez eljuthasson. <br><br>* * *<br>A szállás és ellátás költségei <a href="#tanfolyamok">tanfolyamonként</a> külön lesznek feltűntetve.<br><br><br> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div class="thumbnail thumbnail-gyik">
+                        <h4><strong>Buddhistának kell-e lennem, hogy gyakorolhassak?</strong><br><br></h4>
+                        <p>Nem, nem szükésges buddhistának lenni. A gyakorláshoz semmilyen vallási kötődés nem szükséges. Fontos megérteni, hogy a Vipassana egy meditációs technika és nem egy vallás, vagy filozófiai irányzat.</span><br>A valóság abszolút természete nem függ vallási vagy filozófiai nézetektől.<br>Ha valaki vallási hovatartozásából eredően bizonytalan abban, hogy elkezdjen e gyakorolni, annak érdemes hitoktatójától a kérdésben tanácsot kérni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card cart-block">
+                    <div class="thumbnail thumbnail-gyik">
+                        <h4><strong>Nincs 13 napom, hogy elvégezzem az alaptanfolyamot! Rövidebb idő alatt is lehet?</strong><br></h4>
+                        <p>Az alaptanfolyam elvégzése nem lehetséges rövidebb idő alatt.<br><br>* * *<br>Viszont bármelyik tanfolyamon lehetőség van rövidebb ideig részt venni. Ha valakinek csak pár napja van azt is érdemes kihasználni a gyakorlásra.<br><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+    <!-- Contact Section -->
+    <section id="kapcsolat">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-xs-center">
+
+                    <h3>KAPCSOLAT<br></h3>
+                    <br><br><br><br><br>
+                    <p><strong>Kérdéseket, javaslatokat, tanfolyami regisztrációkat az alábbi email címen vagy telefonszámon várjuk:</strong></p><br>info@buddhavipassana.hu<br>Szervező: Szaszák Péter<br>tel: +36-30-9082823<br><br><br>
+
+                    <hr>
+
+
+
+                    <p><strong>Az Ajahn Tong hagyományvonalán gyakorolt meditációs technika megtalálható még:</strong><br></p><a href="http://www.vipassana.sk" target="_blank">Szlovákia</a><br><a href="http://www.tisarana.cz/en/" target="_blank">Csehország</a><br><a href="http://www.vipassana-dhammacari.com/meditationszentrum_eng.html" target="_blank">Németország</a><br>
+
+                    <hr>
+
+                </div>
+            </div>
+            <br>  <br>
+
+ <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+
+          </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Név *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Telefonszám *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Üzenet *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-sm btn-success">Üzenet Küldése</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+    <br><br><br><br>
+            <div class="container" align="center">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Szervezők</h3>
+                    <h3 class="section-subheading text-muted"></h3><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/peter.jpg" class="img-responsive img-circle" alt=""><br><br>
+                        <h4>Szaszák Péter</h4>
+                        <p class="text-muted"><br>(Magyarország)</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/katarina.jpg" class="img-responsive img-circle" alt=""><br><br>
+                        <h4>Katharina Biresova</h4>
+                        <p class="text-muted"> <br>(Szlovákia)</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/vaczlav.jpg" class="img-responsive img-circle" alt=""><br><br>
+                        <h4>Vaczlav Šmilauer</h4>
+                        <p class="text-muted"><br>(Csehország)</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <div id="információ" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">ELŐADÁS (Budapest)</h4>
+      </div>
+      <div class="modal-body">
+         <img class="img-responsive img-circle" src="img/bp.jpg" alt="" style="height: 90%; width: 90%;"><br><br>
+                                <p>Az előadás várható időpontja 2017. július 29. A szervezés még folyamatban, részletekről információ hamarosan elérhető. </p><br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Bezár</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="szlovakia" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">ALAPTANFOLYAM SZLOVÁKIA (Zólyom)</h4>
+      </div>
+      <div class="modal-body">
+       <img class="img-responsive img-circle" src="img/zolyom.jpg" alt="" style="height: 90%; width: 90%;" ><br><br>
+                                <p>Az 13 napos alaptanfolyam a szlovákiai Zólyom közelében a Javori Meditációs Központban lesz megrendezve. Oktatás egyénileg személyre szabottan. Maximum
+                                25 fő részére. A szállás és ellátás költsége 330Euro. Ha valaki szeretne részt venni, de pénzügyi helyzete ezt nem engedi, jelezze és
+                                megpróbálunk megoldást találni.   <br>
+                                <br> Információ és jelentkezés: <a href="http://vipassana.sk/hu" class="text-primary" target="_blank">www.vipassana.sk</a> <br> vagy itt nálunk a <a href="#kapcsolat" class="text-primary" target="_blank">weboldalon.</a></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Bezár</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Modal -->
+<div id="tisarana" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Csehországi tanfolyamok</h4>
+      </div>
+      <div class="modal-body">
+        <img class="img-responsive img-circle" src="img/praga.jpg" alt="" style="height: 90%; width: 90%;" ><br><br>
+                                <p>Csehországban a tanfolymokra folyamatosan lehet jelentkezni. Mindenki egyénileg kezdi a részvételt, amint van szabad hely. A tanfolyamok költsége támogatók által finanszírozott. A résztvevők tanfolyam végén önkéntes adományokkal járulhatnak hozzá a meditációs központ működéséhez.  <br> Az oktatók angol-német nyelven beszélnek, így nyelvismeret szükséges a részvételhez.<br>
+                                <br> Információ és jelentkezés: <a href="http://tisarana.cz" class="text-primary" target="_blank">www.tisarana.cz</a></p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Bezár</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock content%}
+
+
+
+

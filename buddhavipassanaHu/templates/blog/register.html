@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+
+
+<div class="container" align="center">
+
+      {% if registered %}
+
+    <br><br><br><br><br><br><br>
+    <h2>Thank you for registering!</h2>
+    <h3><a href="{% url 'blog:user_login' %}">You can login to your account</a> </h3>
+      {% else %}
+
+
+        </div>
+ <div class="container text-center">
+    <h1>SIGN UP NEW USER</h1>
+</div>
+<div class="container">
+        <div class="card card-container">
+        <form enctype="multipart/form-data" method="POST" class="form-signin">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+  <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>
+
+        </form>
+
+
+{% endif %}
+{% endblock %}

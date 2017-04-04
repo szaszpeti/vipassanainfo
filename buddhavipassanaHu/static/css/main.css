@@ -1,0 +1,81 @@
+
+/*
+bg-light-gray {
+
+	background-color: #e8e9ed;
+}
+
+.thumbnail {
+	color:white;
+	
+
+	background-color: #74875b;
+}
+
+
+}
+
+.card-block {
+	color:white;
+}
+
+h2 {
+
+	color:#74875b;
+}
+*/
+a {
+	color:#004dce;
+}
+
+.thumbnail-info, .thumbnail-gyik {
+	
+	color:white;
+	background-color: #8204a5;
+	border:2px solid #004dce;
+
+	
+}
+
+.thumbnail-info a, .thumbnail-gyik a {
+	
+	color:yellow;
+	
+
+	
+}
+
+.thumbnail-courses, .thumbnail-teachers {
+	
+
+	border:1px solid #004dce;
+
+	
+}
+
+.thumbnail-courses a {
+	
+
+	color:red;
+
+	
+}
+
+#tisarana a{
+	color:red;
+}
+
+#szlovakia a{
+	color:red;
+}
+
+hr{
+border:1px solid #004dce;
+}
+
+.bg-light-gray {
+
+	background-color: #e8e9ed;
+}
+
+
