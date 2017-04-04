@@ -74,6 +74,43 @@ class Post(models.Model):
         ordering = ["-timestamp", "-updated"]
 
 
+class Document(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    title = models.CharField(max_length=120)
+    slug = models.SlugField(unique=True)
+    image = models.ImageField(upload_to=upload_location,
+        null=True,
+        blank=True,
+        width_field="width_field",
+        height_field="height_field")
+    height_field = models.IntegerField(default=0)
+    width_field = models.IntegerField(default=0)
+    content = models.TextField()
+    draft = models.BooleanField(default=False)
+    publish = models.DateField(auto_now=False, auto_now_add=False)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+
+    #from PostManager
+    objects = PostManager()
+
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse("blog:detail", kwargs={'slug': self.slug})
+
+    class Meta:
+        ordering = ["-timestamp", "-updated"]
+
+
+
+
+
+
+
+
 
 
 def create_slug(instance, new_slug=None):

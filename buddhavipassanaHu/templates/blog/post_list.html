@@ -3,44 +3,48 @@
 
 
 
-<div class="col-sm-6 col-sm-offset-3">
-    <h1>{{ title }}</h1>
+
+    <h1>List of Topics:</h1><br>
 
     <form method="GET" action="">
-        <input type="text" name="q" placeholder="Search post" value="{{request.GET.q}}"/>
+        <input type="text" name="q" placeholder="Find topic" value="{{request.GET.q}}"/>
         <input type="submit" value="Search"/>
 
 
     </form>
+<br>
+<div class="row">
 
 {% for obj in object_list %}
 
-<div class="row">
-  <div class="col-sm-12">
-    <div class="thumbnail">
+
+  <div class="col-lg-3 col-xs-6">
+    <div class="thumbnail thumbnail-blog">
         {% if obj.image %}
       <img src="{{ obj.image.url }}" class="img-responsive"/>
         {% endif %}
       <div class="caption">
-          {% if obj.draft %}<h3>Staff only: DRAFT </h3>{% endif %}
-          {% if obj.publish > today %}<h3>FUTURE POST</h3> {% endif %}
+          <!--{% if obj.draft %}<h3>Staff only: DRAFT </h3>{% endif %}-->
+          <!--{% if obj.publish > today %}<h3>FUTURE POST</h3> {% endif %}-->
 
-          <h3><a href="{{ obj.get_absolute_url }}" >Title: {{ obj.title }}</a><br><small>Created: {{ obj.timestamp|timesince }} ago</small><br><small>Author: {{ obj.user }}</small></h3>
-
-        <p>{{ obj.content|linebreaks|truncatechars:30 }}</p>
-          {% if obj.draft %}
-    <h1><span style="color:red;">DRAFT</span> </h1>
-    {% endif %}
+          <h3><a href="{{ obj.get_absolute_url }}" ><strong>{{ obj.title }}</strong></a></h3><br><h5 class="section-subheading text-muted">Created: {{ obj.timestamp|timesince }} ago</h5><h5 class="section-subheading text-muted">Author: {{ obj.user }}</h5>
+<br>
+        <h5 class="section-subheading text-muted">{{ obj.content|linebreaks|truncatechars:30 }}</h5>
+          <!--{% if obj.draft %}-->
+    <!--<h1><span style="color:red;">DRAFT</span> </h1>-->
+    <!--{% endif %}-->
         <p><a href="{{ obj.get_absolute_url }}" class="btn btn-primary" role="button">View</a>
 
       </div>
     </div>
   </div>
-    <hr/>
-</div>
+    {% endfor %}
+    </div>
+
+
 
 <!--{% cycle "" "<div class='col-sm-12'><hr/></div><div class='row'> " %}-->
-{% endfor %}
+
 
 
     <div class="pagination">

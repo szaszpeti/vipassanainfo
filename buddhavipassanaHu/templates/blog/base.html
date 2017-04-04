@@ -21,9 +21,11 @@
                 <span class="icon-bar"></span>
 
             </button>
-          <a class="navbar-brand" href="{% url 'website:english' %}">HOME</a>
+          <a class="navbar-brand" href="{% url 'website:english' %}">WEBISTE</a>
+            <a class="navbar-brand" href="{% url 'blog:list' %}">BLOG</a>
       </div>
 <div class="collapse navbar-collapse" id="topNavBar">
+
 
 
             <ul class="nav navbar-nav navbar-right">
@@ -65,6 +67,7 @@
   crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<script src="{% static 'js/main.js' %}"></script>
 
 
 </html>

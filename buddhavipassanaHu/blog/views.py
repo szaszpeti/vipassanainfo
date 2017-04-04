@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.contrib import messages
 
-from .models import Post
+from .models import Post, Document
 from django.db.models import Q
 from django.http import HttpResponseRedirect
 from .forms import PostForm
@@ -127,6 +127,21 @@ def post_create(request):
 
 def post_detail(request, slug=None):
 
+    post = get_object_or_404(Post, slug=slug)
+    document = post.document_set.all()
+
+    return render(request, 'blog/post_detail.html', {'post':post, 'document':document})
+
+def read(request, slug=None):
+
+    selected_document = get_object_or_404(Document, slug=slug)
+
+    return render(request, 'blog/document_read.html', {'doc':selected_document})
+
+
+
+# def post_detail(request, slug=None):
+
     instance = get_object_or_404(Post, slug=slug)
     # if instance.draft or instance.publish > timezone.now().date():
     #     if request.user.is_staff or not request.user.is_superuser:
@@ -152,9 +167,9 @@ def post_detail(request, slug=None):
 def post_list(request):
     # queryset_list = Post.objects.filter(draft=False).filter(publish__lte=timezone.now()) #.order_by("-timestamp")
     # queryset_list = Post.objects.all()  # .order_by("-timestamp") after adding PostManager change to active
-    queryset_list = Post.objects.active() #.order_by("-timestamp")
-    if request.user.is_staff or request.user.is_superuser:
-        queryset_list = Post.objects.all()
+    # queryset_list = Post.objects.active() #.order_by("-timestamp")
+    # if request.user.is_staff or request.user.is_superuser:
+    queryset_list = Post.objects.all()
 
 
 
@@ -173,7 +188,7 @@ def post_list(request):
 
         ).distinct() # so NOOOO DUPLICATES
 
-    paginator = Paginator(queryset_list, 3)  # Show 25 contacts per page
+    paginator = Paginator(queryset_list, 10)  # Show 25 contacts per page
     page_request_var = 'page'
 
     page = request.GET.get(page_request_var)
