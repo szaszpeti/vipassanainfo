@@ -47,6 +47,9 @@
                     <li>
                         <a href="{% url 'website:english' %}" style="color:red;">ENGLISH</a>
                    </li>
+                   <li>
+                        <a class="page-scroll" href="{% url 'blog:user_login' %}" style="color:red;" ><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
+                   </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -120,7 +123,7 @@
    <br><br>
 
    <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="thumbnail thumbnail-teachers">
                     <div><img src="{% static 'img/thanat2.jpg' %}" class="card-img-top"></div>
                     <div class="card-block">
@@ -130,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="thumbnail thumbnail-teachers">
                     <div><img src="{% static 'img/kate2.jpg' %}" class="card-img-top"></div>
                     <div class="card-block">
@@ -324,63 +327,66 @@
 
              <div class="thumbnail" style="border:1px solid blue;">
 
-<form id="contact-form" method="POST" action="{% url 'website:index'%}" role="form">
-    {% csrf_token %}
+                <form id="contact-form" method="POST" action="{% url 'website:index'%}" role="form">
+                    {% csrf_token %}
 
-    <div class="controls">
+                    <div class="controls">
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_name">Vezeték név *</label>
-                    <input id="form_name" type="text" name="first_name" class="form-control" placeholder="Vezeték név *" value="{{first_name}}" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_lastname">Kereszt név *</label>
-                    <input id="form_lastname" type="text" name="last_name" class="form-control" placeholder="Kereszt név*" value="{{last_name}}" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email cím *" value="{{email}}" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="form_phone">Telefon</label>
-                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Telefonszám" value="{{phone}}">
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Üzenet *</label>
-                    <textarea id="form_message" type="text"name="message" class="form-control" value="{{message}}"placeholder="Üzenet tartalma *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send" value="Küldés">
-            </div>
-        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Vezeték név *</label>
+                                    <input id="form_name" type="text" name="first_name" class="form-control" placeholder="Vezeték név *" value="{{first_name}}" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Kereszt név *</label>
+                                    <input id="form_lastname" type="text" name="last_name" class="form-control" placeholder="Kereszt név*" value="{{last_name}}" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email cím *" value="{{email}}" required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_phone">Telefon</label>
+                                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Telefonszám" value="{{phone}}">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Üzenet *</label>
+                                    <textarea id="form_message" type="text"name="message" class="form-control" value="{{message}}"placeholder="Üzenet tartalma *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" value="Küldés">
+                            </div>
+                        </div>
 
-    </div>
+                    </div>
 
-</form>
+                </form>
              </div>
          </div>
+         </div>
+         </div>
 
-    </div>
+
+
     <br><br><br><br>
             <div class="container" align="center">
             <div class="row">

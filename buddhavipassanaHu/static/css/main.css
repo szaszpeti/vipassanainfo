@@ -7,7 +7,7 @@ bg-light-gray {
 
 .thumbnail {
 	color:white;
-	
+
 
 	background-color: #74875b;
 }
@@ -29,36 +29,36 @@ a {
 }
 
 .thumbnail-info, .thumbnail-gyik {
-	
+
 	color:white;
 	background-color: #8204a5;
 	border:2px solid #004dce;
 
-	
+
 }
 
 .thumbnail-info a, .thumbnail-gyik a {
-	
-	color:yellow;
-	
 
-	
+	color:yellow;
+
+
+
 }
 
 .thumbnail-courses, .thumbnail-teachers {
-	
+
 
 	border:1px solid #004dce;
 
-	
+
 }
 
 .thumbnail-courses a {
-	
+
 
 	color:red;
 
-	
+
 }
 
 #tisarana a{

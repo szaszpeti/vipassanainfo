@@ -150,15 +150,18 @@ def document_create(request):
 def post_detail(request, slug=None):
 
     post = get_object_or_404(Post, slug=slug)
-    document = post.document_set.all()
+    document = post.document_set.all().order_by("-timestamp")
 
     return render(request, 'blog/post_detail.html', {'post':post, 'document':document})
 
 def read(request, slug=None):
 
+    post = get_object_or_404(Post, slug=slug)
+    document = post.document_set.all().order_by("-timestamp")
+
     selected_document = get_object_or_404(Document, slug=slug)
 
-    return render(request, 'blog/document_read.html', {'doc':selected_document})
+    return render(request, 'blog/document_read.html', {'doc':selected_document, 'document':document})
 
 
 

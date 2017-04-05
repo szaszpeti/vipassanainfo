@@ -6,6 +6,30 @@
 
 
 {% block content %}
+<div class ="container-fluid">
+  <div class ="row">
+
+<div class="col-sm-6">
+    {% for doc in document %}
+
+          <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="thumbnail thumbnail-document" align="center">
+
+
+                    <img src="{{ doc.image.url }}" class="img-responsive" style="height:150px; width:auto;"/>
+                <!--<div id="formButton">-->
+                    <h4><strong>{{doc.title}}</strong></h4>
+
+                        <a href="{% url 'blog:read' slug=doc.slug %}" class="btn btn-primary btn-xs">READ</a>
+
+
+              </div>
+
+          </div>
+          {% endfor %}
+  </div>
+</div>
+
 <div class="col-sm-6 col-sm-offset-3">
      {% if doc.image %}
     <img src="{{ doc.image.url }}" class="img-responsive"/>"
@@ -19,8 +43,30 @@
     <p>Autor username: {{doc.user}}</p>
 {% endif %}
 <div class="fb-like" data-href="{{request.build_absolute.uri}}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+    <hr/>
 
-    <br><a href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute.uri}}">
+    <div class="row">
+        <div class="col-sm-12">
+
+ {{ doc.content|linebreaks }}<br>
+
+            <hr/>
+            <br/>
+
+
+
+    </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}
+
+ <!--
+<br><a href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute.uri}}">
 Facebook
 </a>
 
@@ -29,29 +75,9 @@ Facebook
 Twitter
 </a>
 
+ This is the urlfy : {{ doc.content|truncatechars:20|urlify }}<br>
 
-    <hr/>
-    This is the urlfy : {{ doc.content|truncatechars:20|urlify }}<br>
-
-
-    <div class="row">
-        <div class="col-sm-12">
-
- Content: {{ doc.content|linebreaks }}<br>
-
-            <hr/>
-            <br/>
-
-    <div class="fb-comments" data-href="{{request.build_absolute.uri}}" data-numposts="5"></div>
-
-    </div>
-    </div>
-</div>
-
-
-{% endblock content %}
-
-
+ <div class="fb-comments" data-href="{{request.build_absolute.uri}}" data-numposts="5"></div>-->
 
 
 
