@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, HttpResponse, get_object_or_404,Http404, redirect
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 from .forms import UserForm
 
@@ -14,7 +14,7 @@ from django.contrib import messages
 from .models import Post, Document
 from django.db.models import Q
 from django.http import HttpResponseRedirect
-from .forms import PostForm
+from .forms import PostForm, DocumentForm
 from django.utils import timezone
 
 # Create your views here.
@@ -125,6 +125,28 @@ def post_create(request):
 
     return render(request, 'blog/post_form.html', context)
 
+def document_create(request):
+    # if not request.user.is_staff or not request.user.is_superuser:
+    #     raise Http404
+    # if not request.user.is_authenticated():
+    #     raise Http404
+
+    form = DocumentForm(request.POST or None, request.FILES or None)
+
+    if form.is_valid():
+        instance = form.save(commit=False)
+        #instance.user = request.user
+        print (form.cleaned_data.get('title'))
+        instance.save()
+        messages.success(request, "Successfully Created")
+        return HttpResponseRedirect(instance.get_absolute_url())
+
+    context = {'form':form}
+
+
+
+    return render(request, 'blog/document_form.html', context)
+
 def post_detail(request, slug=None):
 
     post = get_object_or_404(Post, slug=slug)
@@ -169,7 +191,7 @@ def post_list(request):
     # queryset_list = Post.objects.all()  # .order_by("-timestamp") after adding PostManager change to active
     # queryset_list = Post.objects.active() #.order_by("-timestamp")
     # if request.user.is_staff or request.user.is_superuser:
-    queryset_list = Post.objects.all()
+    queryset_list = Post.objects.all().order_by("timestamp")
 
 
 
@@ -214,14 +236,7 @@ def post_list(request):
 
 
 
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-
-def listing(request):
-    contact_list = Contacts.objects.all()
-
-
-    return render(request, 'blog/list.html', {'contacts': contacts})
 
 
 
@@ -247,8 +262,36 @@ def post_update(request, slug=None):
     return render(request, 'blog/post_form.html', context)
 
 
-def post_delete(request, id=None):
-    instance = get_object_or_404(Post, id=id)
+def document_update(request, slug=None):
+    instance = get_object_or_404(Document, slug=slug)
+    form = DocumentForm(request.POST or None, request.FILES or None, instance=instance)
+
+    if form.is_valid():
+        instance = form.save(commit=False)
+        print(form.cleaned_data.get('title'))
+        instance.save()
+        messages.success(request, "<a href='#'>Item</a> Saved", extra_tags='html_safe')
+        return HttpResponseRedirect(instance.get_absolute_url())
+    else:
+        messages.error(request, "Not updated")
+
+    context = {
+        "title": instance.title,
+        'instance': instance,
+        'form':form
+    }
+
+    return render(request, 'blog/post_form.html', context)
+
+
+def post_delete(request, slug=None):
+    instance = get_object_or_404(Post, slug=slug)
     instance.delete()
     messages.success(request, "Successfuly Deleted")
-    return redirect("posts:list")
+    return redirect("blog:list")
+
+def document_delete(request, slug=None):
+    instance = get_object_or_404(Document, slug=slug)
+    instance.delete()
+    messages.success(request, "Successfuly Deleted")
+    return redirect("blog:list")

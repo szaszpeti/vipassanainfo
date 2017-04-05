@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Post
+from .models import Post, Document
 
 
 class UserForm(forms.ModelForm):
@@ -19,5 +19,18 @@ class PostForm(forms.ModelForm):
             "content",
             'draft',
             'publish'
+            ]
+
+class DocumentForm(forms.ModelForm):
+    class Meta():
+        model = Document
+        fields = [
+            "post",
+            "title",
+            "image",
+            "content",
+            "draft",
+            "publish"
 
         ]
+

@@ -91,20 +91,15 @@ class Document(models.Model):
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
-    #from PostManager
-    objects = PostManager()
-
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("blog:detail", kwargs={'slug': self.slug})
+        return reverse("blog:read", kwargs={'slug': self.slug})
 
     class Meta:
-        ordering = ["-timestamp", "-updated"]
-
-
+        ordering = ["timestamp", "-updated"]
 
 
 
@@ -133,8 +128,28 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
 
 
 
-
-
 #befor saved will go truth this and update our slug
 
 pre_save.connect(pre_save_post_receiver, sender=Post)
+
+
+def create_document_slug(instance, new_slug=None):
+    #slugify the title
+    slug = slugify(instance.title)
+    if new_slug is not None:
+        slug = new_slug
+    #check the slug
+    qs = Document.objects.filter(slug=slug).order_by("-id")
+    exists = qs.exists()
+    if exists:
+        new_slug = "%s-%s" %(slug, qs.first().id)
+        return create_document_slug(instance, new_slug=new_slug)
+    return slug
+
+
+def pre_save_document_receiver(sender, instance, *args, **kwargs):
+    if not instance.slug:
+        instance.slug = create_document_slug(instance)
+
+pre_save.connect(pre_save_document_receiver, sender=Document)
+
