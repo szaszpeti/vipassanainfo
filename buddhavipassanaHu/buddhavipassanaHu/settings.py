@@ -10,6 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
+
+#for gmail
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'szaszpeti01@gmail.com'
+EMAIL_HOST_PASSWORD = 'Jimmypage'
+EMAIL_PORT = 587
+
+
+
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,9 +35,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = '4ieo!wjetu$fsk@08*)9mm8ll0nw=16%jo-chbsiig1c@k5yoz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.vipassanainfo.hu']
 
 
 # Application definition

@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.shortcuts import render, HttpResponse, get_object_or_404,Http404, redirect
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.contrib import messages
+from django.core.mail import send_mail
+from buddhavipassanaHu import settings
 
 from .forms import WebsiteRegisterForm
 from .models import WebsiteRegister
@@ -25,6 +28,13 @@ def index(request):
 
             instance = WebsiteRegister(first_name=first_name, last_name=last_name, email=email, phone=phone, message=message)
             instance.save()
+            #send_mail(subject, message, from_email, to_list, fail_silently=True)
+            subject = 'Köszönjük az üzeneted'
+            message_send = 'Üdvözlünk a VipassanaInfo oldalán! /n Amint lehet velvesszük Veled a kapcsolatot!'
+            from_email = settings.EMAIL_HOST_USER
+            to_list = [email, settings.EMAIL_HOST_USER]
+
+            send_mail(subject, message_send, from_email, to_list, fail_silently=True )
 
             return HttpResponseRedirect(reverse('website:index'))
     else:

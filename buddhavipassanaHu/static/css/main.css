@@ -24,6 +24,8 @@ h2 {
 	color:#74875b;
 }
 */
+
+
 a {
 	color:#004dce;
 }
@@ -76,6 +78,58 @@ border:1px solid #004dce;
 .bg-light-gray {
 
 	background-color: #e8e9ed;
+}
+
+.row.thumbnail-oktatok{
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+a.thumbnail-oktatok{
+    display: inline-flex;
+}
+
+a.thumbnail-oktatok div{
+    float: left;
+    margin: 1%;
+}
+
+a.thumbnail-oktatok div:last-child{
+    margin-top: 25px;
+    margin-top: 25px;
+}
+
+a.thumbnail-oktatok ul{
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+
+.jumbotron {
+    background: white;
+
+}
+
+.jumbotron p {
+   font-size: 1em;
+   color:black;
+
+}
+
+#informacio  {
+    background: white;
+    font-size: 1em;
+
+}
+
+#information {
+    background: white;
+    font-size: 1em;
+
+}
+
+#rolunk {
+    font-size: 16px;
+
 }
 
 

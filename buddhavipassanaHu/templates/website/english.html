@@ -1,7 +1,7 @@
 {% extends "website/baseWebsite.html" %}
 
 {% load staticfiles %}
-
+{% block title %}Vipassana Meditation Hungary: Ajahn Tong{% endblock title %}
 {% block content %}
 
     <!-- Navigation -->
@@ -46,9 +46,9 @@
                     <li>
                         <a class="page-scroll" href="{% url 'website:index' %}" style="color:red;" >MAGYAR</a>
                    </li>
-                    <li>
+                     <!--<li>
                         <a class="page-scroll" href="{% url 'blog:user_login' %}" style="color:red;" ><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a>
-                   </li>
+                   </li>-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,16 +69,20 @@
 
     <!-- About Section -->
     <section id="about"  class="bg-light-gray">
+        <div class="container" align="center">
+        <div class="jumbotron" align="center">
        <div class="container" align="center">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-xs-center">
                     <img src="{% static 'img/buddha.png' %}">
                     <br>
                     <br>
-                    <h1>BUDDHAVIPASSANA.HU</h1><br><br><br>
-                    <p style="font-size: 20px;">The website was created to help organise meditation courses in Hungary and central/eastern Europe, following the lineage and technique of the  <a href="#ajahntong">Venerable Ajahn Tong Sirimangalo</a>.<br>  <br><a href="#teachers" >Thanat and Kathryn Chindaporn</a> started to teach the technique on the international level more than 25 years ago and they also support organisation of courses in Hungary.<br><br></p>
+                    <h2>VIPASSANAINFO.HU</h2><br><br><br>
+                    <p style="font-family: Raleway, "Open Sans";">The website was created to help organise meditation courses, following the lineage and technique of the  <a href="#ajahntong">Venerable Ajahn Tong Sirimangalo</a>.<br>  <br><a href="#teachers" >Thanat and Kathryn Chindaporn</a> started to teach the technique on the international level more than 25 years ago and they also support organisation of courses in Hungary.<br><br></p>
                    <hr>
                 </div>
+            </div>
+            </div>
             </div>
 </section>
 
@@ -131,6 +135,183 @@
 
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/PhraOfer.jpg' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>PHRA OFER</strong></li>
+
+                <li><p>The Venerable  Phrakhrubhāvanābidhān (Phra Ajarn Ofer Thiracitto) has been practicing Vipassana meditation since 1989.
+                First at Wat Rampoeng in Chiang Mai thereafter at Wat Phradhatu Sri Chomtong Voravihara with the Venerable Phra Prom Mongkol Vi
+                (Phra Ajarn Tong Sirimalango) and Luang Poh Banyat Akkayano, under the instruction of Khun Thanat and Khun Kathryn Chindaporn.
+                1998 he was authorized to be meditation teacher by  Venerable Phra Ajarn Tong Sirimangalo.
+                For several years Phra Ajarn Ofer taught meditation in Israel before he ordained as a monk in Thailand in 2001,
+                followed by several years as monk and meditation teacher at a Buddhist temple near Frankfurt, Germany.
+                2006 he followed an invitation of his students back to his homeland Israel.
+                He was awarded with the “Annual Benefactor of Buddhism Award” for his service in the Dhamma in May 2010 in Chiang Mai, Thailand.
+                Another Award followed in May 2011 in Bangkok by HRH Princess Maha Chakri Sirindhorn of Thailand,
+                the Award of the “Sao Sema Dhammacakka” (also known as the Golden Pillar of the Dhamma) for benefactors of Buddhism,
+                awarded for introducing and spreading the Dhamma abroad.
+                At the moment Phra Ajarn Ofer is teaching courses in various places in the world.</p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+   <div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/asher.jpg' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>ASHER GAL</strong></li>
+
+                <li><p>Asher Gal has been practicing Vipassana since 1988 under Phra Beniat Akaino and Thanat Chindaporn. He assisted Thanat for several years and became a teacher in 2005. Asher is a diving instructor and stone sculptor residing in Eilat, Israel. Since 2005 he has been teaching in Israel and in the Dhammacari center in Germany.</p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/sandra.jpg' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>SANDRA LUZ CIBRIAN RAMIREZ</strong></li>
+
+                <li><p>Sie is originally from Mexico and
+                has been practicing Vipassana Meditation since 1990.
+                Her teachers are the former Venerable Phra Banyat Akkaynoat at Wat Rampoeng in Chiang Mai
+                and Venerable Ajahn Tong Sirimangalo at Wat Phradhatu Sri Chomtong Voravihara, and the last years Thanat Chindaporn.
+                Started to teach in 1996. Since 2010 she has spent most of her time at Wat Chomthong and teaches there alongside Kathryn and Thanat Chindaporn.
+                Over the last years, Sandra has also been invited to Spain and Mexico to teach meditation retreats there. </p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/hilde.jpg' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>HILDEGARD HUBER</strong></li>
+
+                <li><p>She has been a student of Ven. Ajahn Tong Sirimangalo (Phra Dhammamangalajarn) since 1992.
+                During the first eight months of intensive practice of Vipassana meditation in Thailand, she recognized the wealth of
+                the Dhamma which opened up a new view of life. In 1998 Ven. Ajahn Tong authorised her as Vipassana teacher.
+                At the suggestion of Ven. Ajahn Tong, the Dhammacari Vipassana Meditation Center Association was founded in September 2004 with the mission to establish a meditation center in Germany.
+                The center was opened in February 2006 in Sonnenthal (near Munich). Hildegard Huber has resided there ever since.
+                She was awarded the "Annual Benefactor of Buddhism Award" twice for her service in the Dhamma by the Sangha in May 2011 and 2012 in Chiang Mai.
+                In Bangkok she received the award of the "Sao Sema Dhammacakka" (also known as the Golden Pillar of the Dhamma) for benefactors of Buddhism,
+                awarded for introducing and spreading the Dhamma abroad by HRH Princess Maha Chakri Sirindhorn of Thailand.</p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/jonathan.jpg' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>JONTHAN PREBOY</strong></li>
+
+                <li><p>Jonathan Preboy attended school in the KwaZulu Natal midlands, South Africa,
+                and worked as a clinical psychologist in Durban for 6 years. He first meditated at the Buddhist Retreat Center in Ixcopo in 1992.
+                After practicing various meditation techniques in the 90’s, he went searching for a teacher in Thailand.
+                In 2002, he was fortunate to find Ajahn Tong, a Vipassana meditation master based in Northern Thailand.
+                He started practicing meditation and in 2003 he ordained as a monk for 2 months under Ajahn Tong.
+                In 2004 he began his training as Vipassana teacher and thereafter taught meditation to international students at
+                the temple in Thailand and overseas. Currently he is teaching in Prague, Tisaran Meditation Center</p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/MichaelFreund.jpg' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>MICHAEL FREUND</strong></li>
+
+                <li><p>Michael Freund is originally from Germany and has been practicing Vipassana Meditation since 2010.
+                His teachers are Khun Thanat Chindaporn and Khun Kathryn Chindaporn at Wat Chomtong.
+                There he has spent several months meditating during the years under instructions of his teacher Khun Thanat Chindaporn.
+                2012 he began assisting in retreats and since 2015 he is teaching under Khun Thanat.
+                In 2016 The Venerable Phra Ajarn Tong Sirimangalo authorized him to be a meditation teacher.
+                In 2016 he moved to The Algarve in Portugal to build up a center for Vipassana Meditation.</p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/anna.png' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>ANNA SCHARFENBERG</strong></li>
+
+                <li><p>Anna Scharfenberg was born in Germany and started practicing Vipassana meditation in Europe in 2004.
+                Over the next three years she meditated intensively and was involved with managing and organizing meditation courses.
+                In 2007, she travelled to Thailand to develop her meditation practice.
+                After meeting the Venerable Ajahn Tong she continued practicing and working at Wat Chom Tong,
+                Thailand and at his meditation center in Germany (Dhammacāri Vipassana Meditation Center) until 2012. Currently she is teaching in Prague, Tisaran Meditation Center</p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#" class="thumbnail thumbnail-oktatok">
+            <div class="col-md-12">
+                <img src="{% static 'img/katarina.jpg' %}" style="width:50%; height:auto;" alt="Generic placeholder thumbnail" />
+            </div>
+            <div class="col-md-12">
+              <ul>
+                <li><strong>Katarína Bírešová</strong></li>
+
+                <li><p>She was born in Slovakia and has lived most of her adult life in the UK, with her professional background being neuroscience care. She started practising Vipassana in 2012 and was trained as a teacher by Thanat Chindaporn in Chom Tong.
+                She started the vipassana.sk project in 2016 and invited Thanat and Kathryn Chindaporn to Slovakia for the first course.</p></li>
+              </ul>
+            </div>
+        </a>
+    </div>
+</div>
+
+</div
     </section>
 
 
@@ -174,6 +355,48 @@
                     <div class="card-block">
                         <h4><strong>Czech Republic</strong></h4><p>(Prague)<br></p><br><h4><br>COURSES ONGOING</h4><br><br><br><br><br><p>Teachers: <br>Jonathan Preboy &amp; Anna Scharfenberg</p><br>
                         <h4><a href="#tisarana" class="portfolio-link" data-toggle="modal">Information</a></h4>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-courses">
+                    <div><img src="{% static 'img/bulgaria.jpg' %}" class="card-img-top" style="width:100%; height: 100%;"></div>
+                    <div class="card-block">
+                        <h4><strong>BULGARIA</strong></h4><p>(Pamporovo)</p><br><br><h4>FOUNDATION COURSE</h4><br><strong><h5>14 - 27 July 2017</strong><br></h5><br>
+                        <br>Teachers<br> Thanat &amp; Kathryn Chindaporn<br><br></p>
+                        <h4><a href="#bulgaria" class="portfolio-link" data-toggle="modal">Information</a></h4>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-courses">
+                    <div><img src="{% static 'img/portugal.jpg' %}" class="card-img-top" style="width:100%; height: 100%;"></div>
+                    <div class="card-block">
+                        <h4><strong>PORTUGAL</strong></h4><p>(Algarve)</p><br><br><h4>FOUNDATION COURSE</h4><br><h5><strong>17 - 29. June 2017</strong></h5><br><br><p>Teachers:<br> Phra Ofer &amp; Asher Gal &amp; Michael Freund<br><br></p>
+                         <h4><a href="#portugal" class="portfolio-link" data-toggle="modal">Information</a></h4>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-courses">
+                    <div><img src="{% static 'img/sonnenthal.jpg' %}" class="card-img-top" style="width:100%; height: 100%;"></div>
+                    <div class="card-block">
+                        <h4><strong>GERMANY</strong></h4><p>(Sonnenthal)</p><br><br><h4>COURSES ONGOING</h4><br><br><br><br><p>Teacher: <br>Hildegard Huber</p><br>
+                        <h4><a href="#hilde" class="portfolio-link" data-toggle="modal">Information</a></h4>
 
 
 
@@ -279,30 +502,29 @@
     <!-- Contact Section -->
     <section id="kapcsolat">
 
-
+ <div class="container" align="center">
+        <div class="jumbotron" align="center">
 
          <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-xs-center">
 
-                    <h3>CONTACT<br></h3><br><br><br><hr>
-                    <p><strong>For course registration please contact us at:
-                    </strong><br>info@buddhavipassana.hu<br>Contact person: Peter Szaszak<br>tel: +36-30-9082823<br><br><br><strong>
+                    <h3>CONTACT<br></h3>
+                    <br><br><br><br><br>
+                    <p style="font-size:1.5em;"><strong>For course registration please contact us at:</strong></p>
+                    <br>info@buddhavipassana.hu<br>Contact person: Peter Szaszak<br>tel: +36-30-9082823<br><br><br>
+                        <p><hr></p>
 
-                    The meditation technique practiced in the lineage of Ajahn Tong Sirimangalo<br> can be found also here:</strong><br><a href="http://www.vipassana.sk" target="_blank">Slovakia</a><br><a href="http://www.tisarana.cz/en/" target="_blank">Czech Republic</a><br><a href="http://www.vipassana-dhammacari.com/meditationszentrum_eng.html" target="_blank">Germany</a><br>
+                        <br><br>
 
-                </div>
-            </div>
-<br><br><br><br><br>
-
-<div id="contact">
+ <div id="contact">
      <div class="container">
-    <div class="row">
+        <div class="row">
 
 
-         <div class="col-sm-6 col-md-3 col-lg-6 col-lg-offset-2">
+         <div class="col-sm-6 col-md-12 col-lg-12">
 
-             <div class="thumbnail" style="border:1px solid blue;">
+             <div class="thumbnail" style="border:0px">
                 <form id="contact-form" method="post" action="{% url 'website:english' %}" role="form">
                     {%  csrf_token %}
 
@@ -367,6 +589,28 @@
         </div>
 
     </div>
+<br><br>
+<p><hr></p>
+<br><br>
+                    <p style="font-size:1.5em;"><strong>The meditation technique practiced in the lineage of Ajahn Tong Sirimangalo<br> can be found also here:</strong></p><br>
+
+
+                   <a href="http://www.northernvipassana.org" target="_blank">Thailand<br> (Northern Insight Vipassana Meditation Center)</a><br><br>
+                    <a href="http://www.vipassana.sk" target="_blank">Slovakia</a><br><br>
+                    <a href="http://www.tisarana.cz/en/" target="_blank">Czech Republic <br>(Tisarana Vipassananusorn Meditation Center)</a><br>
+                    <a href="http://www.vipassana-dhammacari.com/meditationszentrum_eng.html" target="_blank">Germany Sonnenthal <br>(Dharmachari Meditation Center)</a><br><br>
+                    <a href="http://www.watthaigoetzenhain.npage.de" target="_blank">Germany Frankfurt<br> (Wat Buddhapiyawararam)</a><br><br>
+                    <a href="http://vipassana-tilakkhana.com" target="_blank">Portugal<br> (Tilakkhana Vipassana)</a><br>
+                    <a href="http://www.vipassana-bulgaria.com" target="_blank">Bulgaria</a><br><br>
+                    <a href="http://www.buddhavipassana.ca" target="_blank">Canada</a><br><br>
+                   <a href="http://www.budismoonline.com" target="_blank">Mexico <br>(Bodhi Tree Vipassana Institute)</a><br><br>
+
+
+                </div>
+            </div>
+<br><br><br><br><br>
+<p><hr></p>
+
     <br><br><br>
     <div class="container" align="center">
             <div class="row">
@@ -395,7 +639,7 @@
                 <div class="col-sm-4">
                     <div class="team-member">
                         <img src="{% static 'img/katarina.jpg' %}" class="img-responsive img-circle" alt=""><br><br>
-                        <h4>Katharina Biresova</h4>
+                        <h4>Katarína Bírešová</h4>
                         <p class="text-muted">(Slovakia)</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
@@ -432,6 +676,9 @@
         </div>
 
         </div>
+
+    </div>
+    </div>
 
     </div>
     </section>
@@ -521,106 +768,75 @@
   </div>
 </div>
 
+<div id="bulgaria" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-
-
-
-
-<!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="információs" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <h2>DHARMA TALK</h2><br><br>
-                                <p class="item-intro text-muted"></p>
-                                <img class="img-responsive img-circle" src="img/bp.jpg" alt="" style="height: 90%; width: 90%;"><br><br>
-                                <p>We oganize a Dharma talk with Thanat & Kathryn Chindaporn. We let you know about the details as soon as possible. </p><br><br>
-
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">FOUNDATION COURSE IN BULGARIA</h4>
+      </div>
+      <div class="modal-body">
+         <img class="img-responsive img-circle" src="{% static 'img/bulgaria.jpg' %}" alt="" style="height: 90%; width: 90%;"><br><br>
+                                <p>The course will be held between July 14th and July 27th in the hotel of the Bulgarian National Television in Pamporovo.<br>
+                                <br>INFORMATION & REGISTRATION:  <a href="http://www.vipassana-bulgaria.com"> www.vipassana-bulgaria.com</a></p><br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
     </div>
 
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="tisaranas" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <h2><strong>Courses in the Czech Republic</strong></h2><br>
-                                <p class="item-intro text-muted"></p>
-                                <img class="img-responsive img-circle" src="img/praga.jpg" alt="" style="height: 90%; width: 90%;" ><br><br>
-                                <p>The center is open 7 days / week and provides teaching and conditions for the practice. The courses are on individual basis, without the need to wait for some date — special courses (as announced in newsletters) and regular meditation groups being an exception to that.<br>
-                                * It is possible to come for introduction: have tea, talk to the teacher and get an idea what is this all about, try the practice for an hour or more;<br>
-                                an arbitrary number of days (one day, or several); <br>
-                                * coming for a part of a day is also fine; basic course with the duration of 21 days; <br>
-                                * it is possible to finish earlier, but you must discuss this with the teacher per e-mail in advance; <br>
-                                * 10-day retreat – for those who have already done the basic course;<br>
-                                * home retreat − for those who have already done the basic course and 10-day retreat, subject to agreement with the teachers;
-                                <br>* weekly evening meditation group, Tuesdays 6pm−8pm, with the possibility of talking to the teacher. Group meeting involves a talk by the teacher, introduction to practice for newcomers and joint meditation. <br>
-                                In principle, we invite anyone to come any time for the practice, but we need to assure good conditions for long-time participants.<br><br>Thanks to the generosity of good people, the course can be entirely donation-based this time. We nevertheless hope to cover the costs with your donations. They will be used to cover course expenses: flight tickets for teachers, rental of the house, operating costs. Thanks in advance!<br><br>
+  </div>
+</div>
 
+<div id="portugal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-                                <br> INFORMATION & REGISTRATION <a href="http://tisarana.cz" class="text-primary" target="_blank">www.tisarana.cz</a></p>
-
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">FOUNDATION COURSE IN PORTUGAL</h4>
+      </div>
+      <div class="modal-body">
+         <img class="img-responsive img-circle" src="{% static 'img/portugal.jpg' %}" alt="" style="height: 90%; width: 90%;"><br><br>
+                                <p>“Monte da Barroquinha” is located close to Tavira in the lovely landscape of “Ria Formorsa”. It has a quiet atmosphere and so it is a good place for meditation.<br>
+                <br>INFORMATION & REGISTRATION: <a href="http://vipassana-tilakkhana.com/de/lehrer/"> Tilakkhana Vipassana Meditation Center</a></p><br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
     </div>
 
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="szlovakias" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <h2><strong>Szlovakia alap tanfolyam</strong></h2><br>
-                                <p class="item-intro text-muted"></p>
-                                <img class="img-responsive img-circle" src="img/zolyom.jpg" alt="" style="height: 90%; width: 90%;" ><br><br>
-                                <p>Intense 2-week retreat (foundation course) with Thai and Slovak teachers; capacity 25 meditators, individual approach, cost 330€ for accomodation, teaching on donation basis. We welcome both beginners and those with prior meditation experience, irrespective of religion, gender or age (16+). <br>
-                                <br> INFORATION & REGISTRATION <a href="http://vipassana.sk/hu" class="text-primary" target="_blank">www.vipassana.sk</a> <br> or with us on this <a href="Kapcsolat.html" class="text-primary" target="_blank">webpage.</a></p>
+  </div>
+</div>
 
+<div id="hilde" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">COURSES IN GERMANY <br> DHARMACHARI MEDITATION CENTER</h4>
+      </div>
+      <div class="modal-body">
+         <img class="img-responsive img-circle" src="{% static 'img/sonnenthal.jpg' %}" alt="" style="height: 90%; width: 90%;"><br><br>
+                                <p>The center is open 7 days / week and provides teaching and conditions for the practice. <br> The participation in the courses is based on donation. We specifically do not give any recommendation for a donation to the teacher, in some cases travel expenses, as well as for the house, room and board. This is in accordance with the Buddhist tradition that the value of the teaching cannot be measured in money. However, the teacher and the meditation center are dependent on voluntary donations (dana) for their livelihood, resp. for the expenses for food and lodging in order to be able to continue the teaching. Giving and generosity are active aspects of any spiritual practice. They help to maintain the teaching and to make it available to everyone.
+                                <br><br>INFORMATION & REGISTRATION: <a href="http://www.vipassana-dhammacari.com"> Dharmachari Meditation Center</a></p><br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
     </div>
+
+  </div>
+</div>
+
+
+
+
+
 
 {% endblock content %}
