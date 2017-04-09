@@ -45,7 +45,7 @@
                 <!--<div id="formButton">-->
                     <h4><strong>{{doc.title}}</strong></h4>
 
-                        <a href="{% url 'blog:read' slug=doc.slug %}" class="btn btn-primary btn-xs">READ</a>
+                        <a href="{% url 'blog:read' slug=doc.slug postslug=post.slug %}" class="btn btn-primary btn-xs">READ</a>
 
 
               </div>

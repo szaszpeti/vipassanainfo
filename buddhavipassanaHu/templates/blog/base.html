@@ -6,9 +6,15 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/blogmain.css' %}"/>
-   <link href="https://fonts.googleapis.com/css?family=Kalam|Patrick+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Patrick+Hand" rel="stylesheet">
+<!--FONT AWSOME-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/blogmain.css' %}">
+
+     {% block head_extra %}{% endblock head_extra %}
+
 </head>
 <body>
    <nav class="navbar navbar-inverse">
@@ -67,7 +73,75 @@
   crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<!-- Latest compiled and minified JQuery -->
+<script
+			  src="http://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Marked -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+
 <script src="{% static 'js/main.js' %}"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+        $(".content-markdown").each(function() {
+
+            var content = $(this).text()
+            console.log(content)
+            var markedContent = marked(content)
+            console.log(content)
+            $(this).html(markedContent)
+    })
+
+        $(".post-detail-item img").each(function() {
+            $(this).addClass("img-responsive")
+    })
+
+    var titleItem = $("#id_title")
+    $("#preview-title").text(titleItem.val())
+
+    var contentInput = $("#id_content")
+
+
+    function setContent(value){
+        var markedContent = marked(value)
+        $("#preview-content").html(markedContent)
+        $("#preview-content img").each(function(){
+            $(this).addClass("img-responsive")
+
+        })
+
+    }
+    setContent(contentInput.val())
+
+    contentInput.keyup(function(){
+        var newContent = $(this).val()
+        setContent(newContent)
+
+    })
+
+
+    var titleInput = $("#id_title")
+
+    function setTitle(value) {
+        $("#preview-title").text(value)
+    }
+    setTitle(titleInput.val())
+
+    titleInput.keyup(function(){
+        var newContent = $(this).val()
+        setTitle(newContent)
+    })
+
+    //preview-title
+    //preview-content
+});
+</script>
+
 
 
 </html>

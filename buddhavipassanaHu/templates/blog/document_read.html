@@ -3,64 +3,87 @@
 
 {% block head_title %}{{doc.title}}| {{block.super}}{% endblock head_title %}
 
-
-
 {% block content %}
-<div class ="container-fluid">
-  <div class ="row">
 
-<div class="col-sm-6">
-    {% for doc in document %}
 
-          <div class="col-sm-6 col-md-3 col-lg-3">
-              <div class="thumbnail thumbnail-document" align="center">
+
+
+
+
+
+
+<div class="col-sm-6 col-lg-offset-1">
+     {% if document.image %}
+    <img src="{{ document.image.url }}" class="img-responsive"/>"
+   {% endif %}
+    <h1> {{ document.title }} <small><br>{{ document.timestamp }}</small></h1>
+{% if document.user.get_full_name %}
+    <p>Autor full name {{document.user.get_full_name}}</p>
+    {% endif %}
+
+    <p>Autor username: {{document.user}}</p>
+
+<div class="fb-like" data-href="{{request.build_absolute.uri}}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+    <br><a href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute.uri}}">
+Facebook
+</a>
+
+
+<a href="https://twitter.com/home?status={{ instance.content|truncatechars:20|urlify }}%20{{request.build_absolute.uri}}">
+Twitter
+</a>
+
+
+    <hr/>
+    This is the urlfy : {{ document.content|truncatechars:20|urlify }}<br>
+
+
+    <div class="row">
+
+
+
+        <div class="col-sm-12">
+            <div class="content-markdown post-detail-item">
+
+ Content: {{ document.content }}<br>
+
+            <hr/>
+            <br/>
+            </div>
+
+    <div class="fb-comments" data-href="{{request.build_absolute.uri}}" data-numposts="5"></div>
+
+    </div>
+    </div>
+</div>
+
+
+<div class="col-sm-6 col-lg-1">
+
+    </div>
+
+<div class="col-sm-6 col-lg-3" align="center">
+<h3>All documents in the <br>"{{ postslug|upper }}"<br> topic:</h3>
+
+    {% for doc in document_list%}
+  <div class="thumbnail thumbnail-document" align="center" style="border: 1px solid blue;">
 
 
                     <img src="{{ doc.image.url }}" class="img-responsive" style="height:150px; width:auto;"/>
                 <!--<div id="formButton">-->
                     <h4><strong>{{doc.title}}</strong></h4>
 
-                        <a href="{% url 'blog:read' slug=doc.slug %}" class="btn btn-primary btn-xs">READ</a>
+
+      <a href="{% url 'blog:read' slug=doc.slug postslug=postslug %}" class="btn btn-primary btn-xs">READ</a>
+
+
 
 
               </div>
+    {% endfor %}
 
-          </div>
-          {% endfor %}
-  </div>
 </div>
-
-<div class="col-sm-6 col-sm-offset-3">
-     {% if doc.image %}
-    <img src="{{ doc.image.url }}" class="img-responsive"/>"
-   {% endif %}
-    <h1> {{ doc.title }} <small>{{ doc.timestamp }}</small></h1>
-
-{% if doc.user.get_full_name %}
-    <p>Autor full name {{doc.user.get_full_name}}</p>
-    {% endif %}
-{% if doc.user %}
-    <p>Autor username: {{doc.user}}</p>
-{% endif %}
-<div class="fb-like" data-href="{{request.build_absolute.uri}}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-    <hr/>
-
-    <div class="row">
-        <div class="col-sm-12">
-
- {{ doc.content|linebreaks }}<br>
-
-            <hr/>
-            <br/>
-
-
-
-    </div>
-    </div>
-</div>
-
-
-
 
 
 {% endblock content %}

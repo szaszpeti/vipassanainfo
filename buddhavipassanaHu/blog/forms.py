@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from .models import Post, Document
+from pagedown.widgets import PagedownWidget
 
 
 class UserForm(forms.ModelForm):
@@ -11,6 +12,9 @@ class UserForm(forms.ModelForm):
 
 
 class PostForm(forms.ModelForm):
+    # show_preview, pictures wont show up on the create form
+    content = forms.CharField(widget=PagedownWidget(show_preview=False))
+    publish = forms.DateField(widget=forms.SelectDateWidget)
     class Meta():
         model = Post
         fields = [
@@ -22,6 +26,8 @@ class PostForm(forms.ModelForm):
             ]
 
 class DocumentForm(forms.ModelForm):
+    content = forms.CharField(widget=PagedownWidget(show_preview=False))
+    publish = forms.DateField(widget=forms.SelectDateWidget)
     class Meta():
         model = Document
         fields = [

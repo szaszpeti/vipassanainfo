@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
 {% load staticfiles %}
 {% block content %}
 
@@ -21,7 +22,7 @@
         <div class="card card-container">
         <form enctype="multipart/form-data" method="POST" class="form-signin">
           {% csrf_token %}
-          {{ user_form.as_p }}
+          {{ user_form|crispy }}
   <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>
 
         </form>

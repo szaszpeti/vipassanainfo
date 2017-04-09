@@ -35,9 +35,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = '4ieo!wjetu$fsk@08*)9mm8ll0nw=16%jo-chbsiig1c@k5yoz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.vipassanainfo.hu']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -50,8 +50,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'markdown_deux',
+    'crispy_forms',
+    'pagedown',
     'blog'
 ]
+
+CRISPY_TEMPLATE_PACK = "bootstrap3"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

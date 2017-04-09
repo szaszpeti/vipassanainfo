@@ -19,9 +19,19 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
+    equalHeight($(".thumbnail-blog"));
+});
+
+
+$(document).ready(function() {
     equalHeight($(".thumbnail-teachers"));
 });
 
 $(document).ready(function() {
     equalHeight($(".thumbnail-courses"));
+});
+
+
+$(document).ready(function() {
+    equalHeight($(".thumbnail-document"));
 });

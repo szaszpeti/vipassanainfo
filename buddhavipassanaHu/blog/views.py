@@ -72,7 +72,7 @@ def user_login(request):
                 login(request,user)
                 # Send the user back to some page.
                 # In this case their homepage.
-                return HttpResponseRedirect(reverse('blog:welcome'))
+                return HttpResponseRedirect(reverse('blog:list'))
             else:
                 # If account is not active:
                 return HttpResponse("Your account is not active.")
@@ -154,30 +154,33 @@ def post_detail(request, slug=None):
 
     return render(request, 'blog/post_detail.html', {'post':post, 'document':document})
 
-def read(request, slug=None):
+def read(request, slug=None, postslug=None):
 
-    post = get_object_or_404(Post, slug=slug)
-    document = post.document_set.all().order_by("-timestamp")
+    document = get_object_or_404(Document, slug=slug)
+    post = get_object_or_404(Post, slug=postslug)
+    document_list = post.document_set.all().order_by("-timestamp")
 
-    selected_document = get_object_or_404(Document, slug=slug)
 
-    return render(request, 'blog/document_read.html', {'doc':selected_document, 'document':document})
+
+    return render(request, 'blog/document_read.html', {'document':document,
+                                                       'document_list':document_list,
+                                                       'postslug':postslug})
 
 
 
 # def post_detail(request, slug=None):
 
-    instance = get_object_or_404(Post, slug=slug)
+    #instance = get_object_or_404(Post, slug=slug)
     # if instance.draft or instance.publish > timezone.now().date():
     #     if request.user.is_staff or not request.user.is_superuser:
     #         raise Http404
 
 
-    context = {
-        "title": instance.title,
-        'instance':instance,
-
-    }
+    # context = {
+    #     "title": instance.title,
+    #     'instance':instance,
+    #
+    # }
     # if request.user.is_authenticated():
     #     context = {
     #
@@ -187,7 +190,7 @@ def read(request, slug=None):
     #     context = {
     #         'title':'please login'
     #     }
-    return render(request, 'blog/post_detail.html', context)
+    #return render(request, 'blog/post_detail.html', context)
 
 def post_list(request):
     # queryset_list = Post.objects.filter(draft=False).filter(publish__lte=timezone.now()) #.order_by("-timestamp")

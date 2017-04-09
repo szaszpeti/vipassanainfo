@@ -7,7 +7,7 @@ bg-light-gray {
 
 .thumbnail {
 	color:white;
-	
+
 
 	background-color: #74875b;
 }
@@ -24,41 +24,43 @@ h2 {
 	color:#74875b;
 }
 */
+
+
 a {
 	color:#004dce;
 }
 
 .thumbnail-info, .thumbnail-gyik {
-	
+
 	color:white;
 	background-color: #8204a5;
 	border:2px solid #004dce;
 
-	
+
 }
 
 .thumbnail-info a, .thumbnail-gyik a {
-	
-	color:yellow;
-	
 
-	
+	color:yellow;
+
+
+
 }
 
 .thumbnail-courses, .thumbnail-teachers {
-	
+
 
 	border:1px solid #004dce;
 
-	
+
 }
 
 .thumbnail-courses a {
-	
+
 
 	color:red;
 
-	
+
 }
 
 #tisarana a{
@@ -77,5 +79,65 @@ border:1px solid #004dce;
 
 	background-color: #e8e9ed;
 }
+
+.row.thumbnail-oktatok{
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+a.thumbnail-oktatok{
+    display: inline-flex;
+}
+
+a.thumbnail-oktatok div{
+    float: left;
+    margin: 1%;
+}
+
+a.thumbnail-oktatok div:last-child{
+    margin-top: 25px;
+    margin-top: 25px;
+}
+
+a.thumbnail-oktatok ul{
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+
+.jumbotron {
+    background: white;
+
+}
+
+.jumbotron p {
+   font-size: 1em;
+   color:black;
+
+}
+
+#informacio  {
+    background: white;
+    font-size: 1em;
+
+}
+
+#information {
+    background: white;
+    font-size: 1em;
+
+}
+
+#rolunk {
+    font-size: 16px;
+
+}
+
+a:hover{
+color : blue;
+}
+
+
+
+
 
 

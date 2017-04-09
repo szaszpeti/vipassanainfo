@@ -7,6 +7,9 @@ from django.db.models.signals import pre_save
 from django.conf import settings
 from django.utils import timezone
 
+from  markdown_deux import markdown
+from django.utils.safestring import mark_safe
+
 from django.utils.text import slugify
 
 # Create your models here.
@@ -73,6 +76,12 @@ class Post(models.Model):
     class Meta:
         ordering = ["-timestamp", "-updated"]
 
+# CONVERT CONTETN TO MARKDOW!!!(HAVE TO INSTALL MARKDOWN-DEUX
+    def get_markdown(self):
+        content = self.content
+        markdown_text = markdown(content)
+        return mark_safe(markdown_text)
+
 
 class Document(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
@@ -100,6 +109,12 @@ class Document(models.Model):
 
     class Meta:
         ordering = ["timestamp", "-updated"]
+
+# CONVERT CONTETN TO MARKDOW!!!(HAVE TO INSTALL MARKDOWN-DEUX
+    def get_markdown(self):
+        content = self.content
+        markdown_text = markdown(content)
+        return mark_safe(markdown_text)
 
 
 

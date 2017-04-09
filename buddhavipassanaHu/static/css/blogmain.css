@@ -175,3 +175,9 @@ body{
 	background-size:cover;
 		min-height:100%;
 }
+
+
+.wmd-panel{
+    margin-right:0px !important;
+    margin-left:0px !important;
+}
