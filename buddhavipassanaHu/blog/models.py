@@ -11,6 +11,9 @@ from  markdown_deux import markdown
 from django.utils.safestring import mark_safe
 
 from django.utils.text import slugify
+from comments.models import Comment
+
+from django.contrib.contenttypes.models import ContentType
 
 # Create your models here.
 class UserProfileInfo(models.Model):
@@ -115,6 +118,18 @@ class Document(models.Model):
         content = self.content
         markdown_text = markdown(content)
         return mark_safe(markdown_text)
+
+    @property
+    def comments(self):
+        instance = self
+        qs = Comment.objects.filter_by_instance(instance)
+        return qs
+
+    @property
+    def get_content_type(self):
+        instance = self
+        content_type = ContentType.objects.get_for_model(instance.__class__)
+        return content_type
 
 
 
